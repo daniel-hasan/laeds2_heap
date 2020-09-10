@@ -11,7 +11,8 @@ class MaxHeap:
 
     def __repr__(self):
         return str(self)
-
+    
+    #Os metodos esquerda, direita e pai serão usados nos demais metodos do heap
     def esquerda(self, i:int) ->int:
         """
             Retorna a posição do filho a esquerda de i
@@ -24,7 +25,7 @@ class MaxHeap:
         """
         return 0
 
-    def pai(self, i) ->int:
+    def pai(self, i:int) ->int:
         """
         Retorna a posição do pai do i-ésimo nó
         """
@@ -49,13 +50,14 @@ class MaxHeap:
 
         while pos_maior_filho<=self.pos_ultimo_item:
             #se a posição do filho a esquerda não for a ultima do vetor,
-            #atualize pos_maior_filho considerando o filho a direita
+            #atualize, se necessario, o pos_maior_filho considerando o filho a direita
             if pos_maior_filho<self.pos_ultimo_item:
                 #### SEU CODIGO AQUI ############
                 pass
 
-            #caso o valor da subarvore
-            #seja maior que o maior valor dos filhos, finaliza o while
+            #caso o valor da  raiz desta subarvore (val_raiz_sub_arvore)
+            #possua um valor maior que o de seus filhos, 
+            # finaliza o while 
             #### SEU CODIGO AQUI ############
 
 
@@ -79,7 +81,8 @@ class MaxHeap:
 
 
         return maximo
-    def insere(self,item):
+
+    def insere(self, item):
         self.arr_heap.append(None)
         pos_inserir = self.pos_ultimo_item
         pai_pos_inserir = self.pai(pos_inserir)
