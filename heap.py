@@ -34,7 +34,7 @@ class MaxHeap:
 
 
     @property
-    def pos_ultimo_item(self):
+    def pos_ultimo_item(self) -> int:
         return len(self.arr_heap)-1
 
     def refaz(self, pos_raiz_sub_arvore:int):

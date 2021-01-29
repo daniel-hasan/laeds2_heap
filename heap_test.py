@@ -49,7 +49,16 @@ class TestHeap(unittest.TestCase):
 
         max_val = obj_heap.retira_max()
         self.assertListEqual(obj_heap.arr_heap, [None,9,7,4,2,5,-3,0,-1,-2, 3], f"A operação test_retira_max não finalizou com o Heap esperado. ")
-
+        
+        obj_heap.arr_heap = [None,12]
+        max_val = obj_heap.retira_max()
+        self.assertEqual(max_val, 12, f"Não foi retirado o menor valor (-12) e sim {min_val} ")
+        self.assertListEqual(obj_heap.arr_heap, [None], f"A operação test_retira_max não finalizou com o Heap esperado. ")
+        
+        obj_heap.arr_heap = [None]
+        max_val = obj_heap.retira_max()
+        self.assertIsNone(max_val, f"Quando a lista está vazia, o método deve retornar None")
+        self.assertListEqual(obj_heap.arr_heap, [None], f"A operação test_retira_max não finalizou com o Heap esperado. ")
     def test_insere(self):
         arr_test = [-1,8,11,14]
         arr_heap_esperado = [[None,12,9,6,4,3,5,2,1,-1],
