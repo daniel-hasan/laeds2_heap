@@ -52,7 +52,7 @@ class TestHeap(unittest.TestCase):
         
         obj_heap.arr_heap = [None,12]
         max_val = obj_heap.retira_max()
-        self.assertEqual(max_val, 12, f"Não foi retirado o maior valor (-12) e sim {max_val} ")
+        self.assertEqual(max_val, 12, f"Não foi retirado o maior valor (12) e sim {max_val} ")
         self.assertListEqual(obj_heap.arr_heap, [None], f"A operação test_retira_max não finalizou com o Heap esperado. ")
         
         obj_heap.arr_heap = [None]
