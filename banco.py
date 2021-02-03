@@ -15,10 +15,12 @@ class Cliente:
 
 
 class PrioridadeCliente:
+    ultima_ordem_chegada = 0
     def __init__(self, cliente:Cliente, prioridade:int):
         self.cliente = cliente
         self.prioridade = prioridade
-        self.horario_entrada = datetime.now()
+        PrioridadeCliente.ultima_ordem_chegada += 1
+        self.ordem_chegada = PrioridadeCliente.ultima_ordem_chegada
 
     def __eq__(self, outro:"PrioridadeCliente") ->bool:
         return True
