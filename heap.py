@@ -76,7 +76,7 @@ class MaxHeap:
 
     def retira_max(self):
         if len(self.arr_heap)<=1:
-            raise IndexError("Heap Vazio")
+            return None
         ## Faça a retirada do máximo conforme especificação/slides da aula teórica
 
 
