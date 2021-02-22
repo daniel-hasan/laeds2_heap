@@ -72,7 +72,7 @@ class TestHeap(unittest.TestCase):
         for val_inserir in arr_test:
             objHeap = MaxHeap()
             objHeap.insere(val_inserir)
-            self.assertListEqual([None,val_inserir],objHeap.arr_heap,f"Inserção incorreta ao inserir o valor {val_inserir} no heap {[None,12,9,6,4,3,5,2,1]}, esperado: {[None,val_inserir]} obtido: {objHeap.arr_heap}")
+            self.assertListEqual([None,val_inserir],objHeap.arr_heap,f"Inserção incorreta ao inserir o valor {val_inserir} no heap vazio, esperado: {[None,val_inserir]} obtido: {objHeap.arr_heap}")
 
         for i,val_inserir in enumerate(arr_test):
             objHeap = MaxHeap()
